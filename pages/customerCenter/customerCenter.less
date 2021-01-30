@@ -1,0 +1,526 @@
+page {
+  background-color: #fff;
+
+}
+
+.container {
+  width: 100%;
+  // padding-bottom: 200rpx;
+  // box-sizing: border-box;
+
+
+  .header {
+    width: 100%;
+    height: 480rpx;
+    position: relative;
+
+    .head_img {
+      width: 100%;
+      height: 100%;
+
+      image {
+        width: 100%;
+      }
+    }
+
+    .user_person {
+      width: 686rpx;
+      position: absolute;
+      left: 32rpx;
+      top: 180rpx;
+      z-index: 5;
+
+      .text_user {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 136rpx;
+
+        .head {
+          width: 136rpx;
+          height: 136rpx;
+          border-radius: 50%;
+
+        }
+
+        .r_login {
+          flex: 1;
+          padding-left: 20rpx;
+          box-sizing: border-box;
+          height: 136rpx;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .per_name {
+            font-size: 44rpx;
+            color: #fff;
+            font-weight: 500;
+          }
+
+          .per_call {
+            display: flex;
+            align-items: center;
+
+            image {
+              width: 32rpx;
+              height: 32rpx;
+              margin-right: 16rpx;
+            }
+
+            .per_phone {
+              flex: 1;
+              font-size: 24rpx;
+              color: #fff;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .health {
+    width: 100%;
+    height: 100%;
+    padding: 0 32rpx;
+    box-sizing: border-box;
+    position: absolute;
+    top: 390rpx;
+    z-index: 20;
+    // margin-top: -390rpx;
+
+
+    .heal_list {
+      width: 100%;
+      padding: 26rpx 32rpx;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 12rpx;
+      box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+      margin-bottom: 20rpx;
+
+
+      .top_heal {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 26rpx;
+        border-bottom: 1rpx dashed #7D7E80;
+
+        .order_num {
+          font-size: 24rpx;
+          color: #7D7E80;
+        }
+
+        .order_status {
+          font-size: 28rpx;
+          color: #2572FA;
+        }
+      }
+
+      .lei {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26rpx 0;
+        box-sizing: border-box;
+
+        .mold {
+          font-size: 24rpx;
+          color: #323233;
+        }
+      }
+
+      .out_time {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+
+        .out_name {
+          width: 145rpx;
+          font-size: 24rpx;
+          color: #323233;
+        }
+
+        .out_right_text {
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+
+          .lef {
+            font-size: 24rpx;
+            color: #323233;
+            line-height: 40rpx;
+          }
+
+          .ffccc {
+            font-size: 24rpx;
+            color: #969799;
+            line-height: 40rpx;
+          }
+        }
+      }
+
+      .already {
+        width: 100%;
+        padding-bottom: 13rpx;
+        box-sizing: border-box;
+
+        .free_of_charge {
+          width: 100%;
+          font-size: 24rpx;
+          color: #323233;
+          padding: 13rpx 0;
+          box-sizing: border-box;
+        }
+
+      }
+
+      .down_heal_btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        border-top: 1rpx solid #f2f2f2;
+        padding-top: 26rpx;
+        box-sizing: border-box;
+
+        button {
+          margin: 0;
+          padding: 0;
+        }
+
+        .look_ben {
+          padding: 20rpx 24rpx;
+          border: 1rpx solid #969799;
+          border-radius: 4rpx;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24rpx;
+          color: #323233;
+          margin-left: 20rpx;
+          margin-bottom: 20rpx;
+
+          &:first-child {
+            margin: 0 0 20rpx;
+          }
+
+        }
+
+        .look_btn_color {
+          border: 1rpx solid #2572FA;
+          color: #2572FA;
+        }
+
+        .bgc_color {
+          padding: 20rpx 22rpx;
+          box-sizing: border-box;
+          background: linear-gradient(180deg, #2574fb, #3138e0);
+          color: #fff;
+        }
+
+        .bgc_color2 {
+          padding: 20rpx 60rpx;
+          box-sizing: border-box;
+          background: #44BB00;
+          color: #fff;
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .bends {
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    background-color: #fff;
+    z-index: 1000;
+
+    .be_nd {
+      width: 100%;
+      margin-left: 32rpx;
+      padding: 10rpx 0;
+      box-sizing: border-box;
+
+      .wechat_btn {
+        width: 686rpx;
+        height: 88rpx;
+        background: linear-gradient(180deg, #2574fb, #3138e0);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        font-size: 28rpx;
+        color: #fff;
+
+      }
+    }
+  }
+
+
+
+
+  /* 弹窗 */
+  .zan_dialog__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.4);
+
+  }
+
+  .zan_dialog__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    transform: translateY(300%);
+    transition: all 0.4s ease;
+    z-index: 22;
+    height: 600rpx;
+
+    .d_popup {
+      margin-top: 50rpx;
+      padding: 24rpx 48rpx;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 20rpx;
+
+      .pup {
+        width: 368rpx;
+        height: 368rpx;
+        margin: 54rpx auto;
+
+        image {
+          width: 100%;
+        }
+      }
+
+      .gong {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 28rpx;
+        color: #323233;
+        text-align: center;
+
+      }
+
+      .btnbuy {
+        width: 100%;
+        margin: 64rpx 0 50rpx;
+
+
+        .btnbuy__ {
+          height: 88rpx;
+          width: 60%;
+          color: #fff;
+          line-height: 88rpx;
+          padding: 0;
+          box-sizing: border-box;
+          font-weight: 400;
+          font-size: 28rpx;
+          background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+          border-radius: 44px;
+          box-shadow: 0px 8px 24px 6px rgba(6, 27, 149, 0.15);
+        }
+      }
+    }
+  }
+
+  .tishi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    transform: translateY(300%);
+    transition: all 0.4s ease;
+    z-index: 202;
+    height: 300rpx;
+
+
+    .d_popup {
+      margin-top: 100rpx;
+      padding: 24rpx 48rpx;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 8rpx;
+
+      .pup {
+        width: 100%;
+        font-size: 32rpx;
+        color: #323233;
+        text-align: center;
+        padding: 20rpx 0;
+        box-sizing: border-box;
+        font-weight: 600;
+
+      }
+
+
+      .gong {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 28rpx;
+        color: #7D7E80;
+        text-align: center;
+
+      }
+
+      .sure {
+        width: 100%;
+        border-top: 1rpx solid #f2f2f2;
+        padding-top: 24rpx;
+        box-sizing: border-box;
+        text-align: center;
+        color: #3388FF;
+        font-size: 32rpx;
+        margin-top: 32rpx;
+      }
+    }
+  }
+
+  .zan_dialog_show .zan_dialog__container {
+    transform: translateY(0);
+  }
+
+  .zan_dialog_show .tishi {
+    transform: translateY(0);
+  }
+
+  .zan_dialog_show .zan_dialog__mask {
+    display: block;
+  }
+
+  .login {
+
+    // 弹窗
+    /*使屏幕变暗  */
+    .commodity_screen {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.2;
+      overflow: hidden;
+      z-index: 1000;
+      color: #fff;
+    }
+
+    /*对话框 */
+    .commodity_attr_box {
+      height: 400rpx;
+      width: 100%;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 2000;
+      background: #fff;
+      padding: 20rpx;
+      box-sizing: border-box;
+      border-radius: 24rpx 24rpx 0 0;
+
+      .phoneshou {
+        width: 100%;
+        padding: 0 32rpx;
+        box-sizing: border-box;
+
+        .padlock {
+          width: 100%;
+          height: 48rpx;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          image {
+            width: 48rpx;
+            height: 48rpx;
+          }
+        }
+
+        .phone_title {
+          width: 100%;
+          height: 70rpx;
+          font-size: 44rpx;
+          line-height: 70rpx;
+          color: #06121F;
+          font-family: PingFangSC, PingFangSC-Regular;
+
+
+        }
+
+        .tips_content {
+          width: 100%;
+          height: 40rpx;
+          font-size: 32rpx;
+          color: #8C9198;
+          margin: 30rpx 0;
+        }
+
+
+        .downbtn {
+          width: 750rpx;
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 20rpx 0;
+          background-color: #fff;
+
+          .btn {
+            height: 100rpx;
+            width: 90%;
+            color: #fff;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 32rpx;
+            background: linear-gradient(180deg, #2574fb, #3138e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50rpx;
+
+            image {
+              width: 48rpx;
+              height: 48rpx;
+              margin-right: 20rpx;
+            }
+
+          }
+
+          .btn1 {
+            margin-bottom: 20rpx;
+            background-color: #ccc;
+          }
+        }
+      }
+
+    }
+  }
+
+}

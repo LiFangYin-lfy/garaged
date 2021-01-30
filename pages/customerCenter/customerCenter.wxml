@@ -1,0 +1,117 @@
+<view class="container">
+  <view class="header">
+    <view class="head_img">
+      <image src="{{imagesUrl}}/img_d.png" />
+    </view>
+    <view class="user_person">
+      <view class="text_user" bindtap="goverification">
+        <image wx:if="{{userinfo.avatar != ''}}" src="{{userinfo.avatar}}" class="head" />
+        <image wx:else src="{{imagesUrl}}/img_y.png" class="head" />
+        <view class="r_login">
+          <view class="per_name">{{userinfo.nickname}}</view>
+          <!-- <view class="per_call">
+            <image src="{{imagesUrl}}/img_n.png" />
+            <view class="per_phone">{{userinfo.}}</view> 
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="health">
+    <block wx:for="{{customer}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="heal_list" catchtap="goorderDetail" data-id="{{item.id}}">
+        <view class="top_heal">
+          <view class="order_num">合同编码：{{item.contract.contract_code}}</view>
+          <view class="order_status" wx:if="{{item.status == 0}}">待付款</view>
+          <view class="order_status" wx:if="{{item.status == 1}}">使用中</view>
+          <view class="order_status" wx:if="{{item.status == 2}}">延保过期</view>
+        </view>
+        <view class="lei">
+          <view class="mold">套餐类型：{{item.package.package_name}}</view>
+          <view class="mold">车牌号：{{item.contract.license_plate}}</view>
+        </view>
+        <view class="out_time">
+          <view class="out_name">延保有效期：</view>
+          <view class="out_right_text">
+            <view class="lef">
+              {{item.start_time}}00:00~{{item.end_time}}24:00  或{{item.kilometre_min}}公里~{{item.kilometre_max}}公里
+            </view>
+            <view class="ffccc">（以先到条件为准）</view>
+          </view>
+        </view>
+        <view class="already">
+          <view class="free_of_charge">免费保养已用次数：{{item.care_times_use}}次</view>
+          <view class="free_of_charge">免费保养剩余次数：{{item.care_times_nouse}}次</view>
+        </view>
+        <view class="down_heal_btn">
+          <button class="look_ben  bgc_color" wx:if="{{item.pay_type== 1 && item.status== 0}}" style="width: 160rpx; font-weight:400" disabled="{{is_true}}" catchtap="gotoOrderPay" data-id="{{item.id}}">
+            微信支付
+          </button>
+          <button class="look_ben " wx:if="{{item.pay_type== 1 && item.status== 0}}" style="width: 160rpx; color:#fff; background: #44BB00; font-weight:400" disabled="{{is_true}}" catchtap="offlinePay" data-id="{{item.id}}">
+            线下转账
+          </button>
+          <view class="look_ben" catchtap="goorderDetail" data-id="{{item.id}}">查看详情</view>
+          <view class="look_ben  look_btn_color" catchtap="lookShroffAccount" wx:if="{{item.pay_type==2 && item.status == 0}}">
+            查看服务商收款账号
+          </view>
+          <view class="look_ben  bgc_color" catchtap="cancelAfter" data-statusway="{{item.status}}" data-id="{{item.id}}" wx:if="{{item.status != 0}}" data-cilit="0">
+            保修核销
+          </view>
+          <view class="look_ben bgc_color2" wx:if="{{item.status != 0}}" data-statusway="{{item.status}}" catchtap="cancelAfter" data-nouse="{{item.care_times_nouse}}" data-id="{{item.id}}" data-cilit="1">
+            保养核销
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="bends" wx:if="{{showdLog}}">
+    <view class="be_nd">
+      <button class="wechat_btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        微信授权
+      </button>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask" bindtap="toggleDialog" />
+    <view class="zan_dialog__container" wx:if="{{showDialog &&  statusWay != 2}}">
+      <view class="d_popup">
+        <view class="pup">
+          <image src="{{guarantee}}" wx:if="{{cancelA== 0}}" />
+          <image src="{{upkeep}}" wx:if="{{cancelA== 1}}" />
+        </view>
+        <view class="gong">请出示给4S店服务顾问 进行扫码核销</view>
+        <view class="btnbuy">
+          <button bindtap="toggleDialog" class="btnbuy__" size="default">关闭</button>
+        </view>
+      </view>
+    </view>
+    <view class="tishi" wx:if="{{showDialog &&  statusWay == 2}}">
+      <view class="d_popup">
+        <view class="pup">提示</view>
+        <view class="gong">{{listError}}</view>
+        <view class="sure" bindtap="toggleDialog">确认</view>
+      </view>
+    </view>
+  </view>
+  <!-- 授权登录 -->
+  <view class="login">
+    <!-- 屏幕背景变暗的背景 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!-- 弹出框 -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+      <view class="phoneshou">
+        <view class="padlock" catchtap="hideModal">
+          <image src="{{imagesUrl}}/icon_a.png" />
+        </view>
+        <view class="phone_title">请先授权登录</view>
+        <view class="tips_content">为了更好的为你提供服务，请允许微信授权后再使用功能</view>
+        <view class="downbtn">
+          <button class="btn" open-type="getUserInfo" bindgetuserinfo="wechatWarranty">
+            <image src="{{imagesUrl}}/icon_c.png" />
+            授权登录
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

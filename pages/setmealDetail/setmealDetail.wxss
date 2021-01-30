@@ -1,0 +1,442 @@
+/**
+ * author: Di (微信小程序开发工程师)
+ * organization: WeAppDev(微信小程序开发论坛)(http://weappdev.com)
+ *               垂直微信小程序开发交流社区
+ * 
+ * github地址: https://github.com/icindy/wxParse
+ * 
+ * for: 微信小程序富文本解析
+ * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
+ */
+.wxParse {
+  margin: 0 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.8;
+}
+/* .details_img view {
+    word-break: break-all;
+    overflow: hidden;
+} */
+view {
+  /* word-break: break-all; */
+  /* overflow: auto; */
+}
+.wxParse-inline {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+/*//标题 */
+.wxParse-div {
+  margin: 0;
+  padding: 0;
+}
+.wxParse-h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.wxParse-h2 {
+  font-size: 1.5em;
+  margin: 0.75em 0;
+}
+.wxParse-h3 {
+  font-size: 1.17em;
+  margin: 0.83em 0;
+}
+.wxParse-h4 {
+  margin: 1.12em 0;
+}
+.wxParse-h5 {
+  font-size: 0.83em;
+  margin: 1.5em 0;
+}
+.wxParse-h6 {
+  font-size: 0.75em;
+  margin: 1.67em 0;
+}
+.wxParse-h1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.9em;
+}
+.wxParse-h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0.34em;
+}
+.wxParse-h3 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 0.34em;
+}
+.wxParse-h4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0.24em;
+}
+.wxParse-h5 {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 0.14em;
+}
+.wxParse-h6 {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0.04em;
+}
+.wxParse-h1,
+.wxParse-h2,
+.wxParse-h3,
+.wxParse-h4,
+.wxParse-h5,
+.wxParse-h6,
+.wxParse-b,
+.wxParse-strong {
+  font-weight: bolder;
+}
+.wxParse-i,
+.wxParse-cite,
+.wxParse-em,
+.wxParse-var,
+.wxParse-address {
+  font-style: italic;
+}
+.wxParse-pre,
+.wxParse-tt,
+.wxParse-code,
+.wxParse-kbd,
+.wxParse-samp {
+  font-family: monospace;
+}
+.wxParse-pre {
+  white-space: pre;
+}
+.wxParse-big {
+  font-size: 1.17em;
+}
+.wxParse-small,
+.wxParse-sub,
+.wxParse-sup {
+  font-size: 0.83em;
+}
+.wxParse-sub {
+  vertical-align: sub;
+}
+.wxParse-sup {
+  vertical-align: super;
+}
+.wxParse-s,
+.wxParse-strike,
+.wxParse-del {
+  text-decoration: line-through;
+}
+/*wxparse-自定义个性化的css样式*/
+/*增加video的css样式*/
+.wxParse-strong,
+.wxParse-s {
+  display: inline;
+}
+.wxParse-a {
+  color: deepskyblue;
+  word-break: break-all;
+  overflow: auto;
+}
+.wxParse-video {
+  text-align: center;
+  margin: 10px 0;
+}
+.wxParse-video-video {
+  width: 100%;
+}
+.wxParse-img {
+  /*background-color: #efefef;*/
+  overflow: hidden;
+}
+.wxParse-blockquote {
+  margin: 0;
+  padding: 10px 0 10px 5px;
+  font-family: Courier, Calibri, "宋体";
+  background: #f5f5f5;
+  border-left: 3px solid #dbdbdb;
+}
+.wxParse-code,
+.wxParse-wxxxcode-style {
+  display: inline;
+  background: #f5f5f5;
+}
+.wxParse-ul {
+  margin: 20rpx 10rpx;
+}
+.wxParse-li,
+.wxParse-li-inner {
+  display: flex;
+  align-items: baseline;
+  margin: 10rpx 0;
+}
+.wxParse-li-text {
+  align-items: center;
+  line-height: 20px;
+}
+.wxParse-li-circle {
+  display: inline-flex;
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  margin-right: 5px;
+}
+.wxParse-li-square {
+  display: inline-flex;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #333;
+  margin-right: 5px;
+}
+.wxParse-li-ring {
+  display: inline-flex;
+  width: 10rpx;
+  height: 10rpx;
+  border: 2rpx solid #333;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+}
+/*.wxParse-table{
+    width: 100%;
+    height: 400px;
+}
+.wxParse-thead,.wxParse-tfoot,.wxParse-tr{
+    display: flex;
+    flex-direction: row;
+}
+.wxParse-th,.wxParse-td{
+    display: flex;
+    width: 580px;
+    overflow: auto;
+}*/
+.wxParse-u {
+  text-decoration: underline;
+}
+.wxParse-hide {
+  display: none;
+}
+.WxEmojiView {
+  align-items: center;
+}
+.wxEmoji {
+  width: 16px;
+  height: 16px;
+}
+.wxParse-tr {
+  display: flex;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-th,
+.wxParse-td {
+  flex: 1;
+  padding: 5px;
+  font-size: 28rpx;
+  border-left: 1px solid #e0e0e0;
+  word-break: break-all;
+}
+.wxParse-td:last {
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-th {
+  background: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-del {
+  display: inline;
+}
+.wxParse-figure {
+  overflow: hidden;
+}
+page {
+  width: 100%;
+  background: #f7f8fa;
+}
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #2e49e8 72%, #3138e0);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0rpx 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .header .meal_box {
+  width: 100%;
+}
+.container .header .meal_box .meal_item {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.container .header .meal_box .meal_item .meal_list {
+  width: 686rpx;
+  margin: 0rpx auto 0;
+  margin-bottom: 24rpx;
+  padding: 26rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+  position: absolute;
+  top: 30rpx;
+  left: 32rpx;
+  z-index: 12;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 26rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_name {
+  font-size: 32rpx;
+  color: #323233;
+  font-weight: 600;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_money {
+  display: flex;
+  align-items: baseline;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_money .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_money .pt .pt_icon {
+  font-size: 26rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_money .pt .pt_price {
+  font-size: 32rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .header .meal_box .meal_item .meal_list .set_namw .meal_money .money {
+  font-size: 24rpx;
+  color: #969799;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+.container .header .meal_box .meal_item .meal_list .warranty_coverage {
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #323233;
+}
+.container .header .meal_box .meal_item .meal_list .engine_oil {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .header .meal_box .meal_item .meal_list .engine_oil .oil_type,
+.container .header .meal_box .meal_item .meal_list .engine_oil .free_num {
+  font-size: 24rpx;
+  color: #323233;
+}
+.container .outTime {
+  width: 100%;
+  padding: 120rpx 32rpx 60rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+}
+.container .outTime .text_time {
+  width: 100%;
+  font-size: 32rpx;
+  color: #323233;
+  font-weight: 600;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.container .outTime .small_text {
+  width: 100%;
+  font-size: 24rpx;
+  color: #323233;
+  line-height: 50rpx;
+}
+.container .out_details {
+  margin-top: 20rpx;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.container .out_details .text_time {
+  width: 100%;
+  padding: 32rpx;
+  font-size: 32rpx;
+  color: #323233;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.container .out_details .details_img {
+  width: 100% !important;
+  padding: 10rpx 26rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden !important;
+}
+.container .out_details .details_img view {
+  max-width: 100% !important;
+  word-break: break-all;
+  overflow: hidden !important;
+}
+.container .out_details .details_img image {
+  max-width: 100%;
+  visibility: middle;
+}
+.container .btnbuy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 0;
+  z-index: 10;
+  background-color: #fff;
+}
+.container .btnbuy .btnbuy__ {
+  height: 88rpx;
+  width: 92%;
+  color: #fff;
+  line-height: 88rpx;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 44px;
+  box-shadow: 0px 8px 24px 6px rgba(6, 27, 149, 0.15);
+}

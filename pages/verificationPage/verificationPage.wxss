@@ -1,0 +1,375 @@
+page {
+  background-color: #F7F8FA;
+}
+.container {
+  width: 100%;
+  /* 弹窗 */
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .health .heal_list {
+  width: 100%;
+  padding: 26rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+  margin-bottom: 20rpx;
+}
+.container .health .heal_list .top_heal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 26rpx;
+  border-bottom: 1rpx dashed #7D7E80;
+}
+.container .health .heal_list .top_heal .order_num {
+  font-size: 24rpx;
+  color: #7D7E80;
+}
+.container .health .heal_list .top_heal .order_status {
+  font-size: 28rpx;
+  color: #2572FA;
+}
+.container .health .heal_list .lei {
+  width: 100%;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}
+.container .health .heal_list .lei .mold {
+  width: 100%;
+  font-size: 24rpx;
+  color: #323233;
+}
+.container .health .heal_list .out_time {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+.container .health .heal_list .out_time .out_name {
+  width: 145rpx;
+  font-size: 24rpx;
+  color: #323233;
+}
+.container .health .heal_list .out_time .out_right_text {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container .health .heal_list .out_time .out_right_text .lef {
+  font-size: 24rpx;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .heal_list .out_time .out_right_text .ffccc {
+  font-size: 24rpx;
+  color: #969799;
+  line-height: 40rpx;
+}
+.container .health .heal_list .already {
+  width: 100%;
+  padding-bottom: 13rpx;
+  box-sizing: border-box;
+}
+.container .health .heal_list .already .free_of_charge {
+  width: 100%;
+  font-size: 24rpx;
+  color: #323233;
+  padding: 13rpx 0;
+  box-sizing: border-box;
+}
+.container .health .heal_list:last-child {
+  margin: 0;
+}
+.container .health .Oil_Type {
+  width: 100%;
+  margin-top: 26rpx;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.container .health .Oil_Type .oil_name {
+  font-size: 28rpx;
+  color: #3D444C;
+  margin-right: 50rpx;
+}
+.container .health .Oil_Type .oil_name:last-child {
+  margin-right: 0;
+}
+.container .health .usr_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F7F8FA;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .usr_info .t_user {
+  font-size: 32rpx;
+  color: #323233;
+  font-weight: 600;
+}
+.container .health .usr_info .t_user_A {
+  font-size: 28rpx;
+  color: #7D7E80;
+}
+.container .health .zi_info {
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .health .zi_info .zi_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .zi_info .zi_list .zi_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .health .zi_info .zi_list .input_text {
+  flex: 1;
+}
+.container .btnbuy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+}
+.container .btnbuy .bu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .btnbuy .bu .btnbuy__ {
+  height: 88rpx;
+  width: 60%;
+  color: #fff;
+  line-height: 88rpx;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 44px;
+  box-shadow: 0px 8px 24px 6px rgba(6, 27, 149, 0.15);
+}
+.container .btnbuy .bu .btnbuy_look {
+  width: 40%;
+  margin-right: 20rpx;
+  border: 1rpx solid #7D7E80;
+  color: #323233;
+  background: transparent;
+}
+.container .login {
+  /*使屏幕变暗  */
+  /*对话框 */
+}
+.container .login .commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.container .login .commodity_attr_box {
+  height: 400rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 24rpx 24rpx 0 0;
+}
+.container .login .commodity_attr_box .phoneshou {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .login .commodity_attr_box .phoneshou .padlock {
+  width: 100%;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .login .commodity_attr_box .phoneshou .padlock image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .login .commodity_attr_box .phoneshou .phone_title {
+  width: 100%;
+  height: 70rpx;
+  font-size: 44rpx;
+  line-height: 70rpx;
+  color: #06121F;
+  font-family: PingFangSC, PingFangSC-Regular;
+}
+.container .login .commodity_attr_box .phoneshou .tips_content {
+  width: 100%;
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #8C9198;
+  margin: 30rpx 0;
+}
+.container .login .commodity_attr_box .phoneshou .downbtn {
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.container .login .commodity_attr_box .phoneshou .downbtn .btn {
+  height: 100rpx;
+  width: 90%;
+  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+}
+.container .login .commodity_attr_box .phoneshou .downbtn .btn image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+.container .login .commodity_attr_box .phoneshou .downbtn .btn1 {
+  margin-bottom: 20rpx;
+  background-color: #ccc;
+}
+.container .zan_dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.4);
+}
+.container .zan_dialog__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 999;
+  height: 600rpx;
+}
+.container .zan_dialog__container .d_popup {
+  margin-top: 100rpx;
+  padding: 24rpx 48rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8rpx;
+}
+.container .zan_dialog__container .d_popup .box_name {
+  width: 100%;
+  text-align: center;
+  height: 48rpx;
+  font-size: 32rpx;
+  color: #06121F;
+  font-weight: 600;
+}
+.container .zan_dialog__container .d_popup .gong {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #7D7E80;
+  text-align: center;
+}
+.container .zan_dialog__container .d_popup .gong_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.container .zan_dialog__container .d_popup .gong_box .box_inp {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #06121F;
+  text-align: left;
+}
+.container .zan_dialog__container .d_popup .gong_box .inp_input {
+  flex: 1;
+}
+.container .zan_dialog__container .d_popup .gong_box .inp_input .input_calss {
+  width: 100%;
+  height: 48rpx;
+  border: 1rpx solid #ccc;
+  padding-left: 16rpx;
+  box-sizing: border-box;
+}
+.container .zan_dialog__container .d_popup .sure {
+  width: 100%;
+  border-top: 1rpx solid #f2f2f2;
+  padding-top: 24rpx;
+  box-sizing: border-box;
+  text-align: center;
+  color: #3388FF;
+  font-size: 32rpx;
+  margin-top: 32rpx;
+}
+.container .zan_dialog_show .zan_dialog__container {
+  transform: translateY(0);
+}
+.container .zan_dialog_show .zan_dialog__mask {
+  display: block;
+}

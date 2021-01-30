@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">购买成功</view>
+    </view>
+  </view>
+  <view class="purchase">
+    <view class="pur_img">
+      <image src="{{imagesUrl}}/img_e.png" />
+      <view class="pur_text">购买成功</view>
+      <view class="pur_small_text">您已购买成功，请点击前往客户中心</view>
+    </view>
+    <view class="btn">
+      <button class="btnbuy__" size="default" bindtap="goCustomerCenter">客户中心</button>
+    </view>
+  </view>
+</view>

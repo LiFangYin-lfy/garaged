@@ -1,0 +1,314 @@
+page {
+  background: #FFFFFF;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx 0;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .invoiceInformation {
+  width: 100%;
+  padding: 32rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .invoiceInformation .infor {
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff, #E8F1FF);
+  padding: 32rpx 32rpx 10rpx;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07), 0rpx -2rpx 6rpx 0rpx rgba(207, 207, 207, 0.5) inset;
+}
+.container .invoiceInformation .infor .in_name {
+  width: 100%;
+  font-size: 28rpx;
+  color: #232333;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.container .invoiceInformation .infor .in_name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0rpx;
+  width: 8rpx;
+  height: 34rpx;
+  background: linear-gradient(137deg, #2574FB 3%, #3138E0 102%);
+  border-radius: 4rpx;
+}
+.container .invoiceInformation .infor .in_list {
+  width: 100%;
+  padding: 14rpx 0;
+  box-sizing: border-box;
+  border-top: 1rpx solid #f2f2f2;
+  border-bottom: 1rpx solid #fff;
+}
+.container .invoiceInformation .infor .in_list .in_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .infor .in_list .in_item .in_left {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #7D7E80;
+}
+.container .invoiceInformation .infor .in_list .in_item .in_right {
+  flex: 1;
+  font-size: 28rpx;
+  color: #323233;
+}
+.container .invoiceInformation .infor .set_warn {
+  width: 100%;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #969799;
+}
+.container .invoiceInformation .infor .btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .infor .btns .changeItem {
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #2572FA;
+  border: 1rpx solid #015af8;
+  border-radius: 4rpx;
+  margin-right: 32rpx;
+  font-weight: 400;
+}
+.container .invoiceInformation .infor .btns .changeItem:last-child {
+  margin: 0;
+}
+.container .invoiceInformation .infor .btns .item_b {
+  width: 198rpx;
+  color: #fff;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+}
+.container .invoiceInformation .tai_type {
+  width: 100%;
+}
+.container .invoiceInformation .tai_type .tai_a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .tai_type .tai_a .a_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .invoiceInformation .tai_type .tai_a .change_checked {
+  flex: 1;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.container .invoiceInformation .tai_type .tai_a .change_checked .change_it {
+  display: flex;
+  align-items: center;
+  margin-right: 35rpx;
+}
+.container .invoiceInformation .tai_type .tai_a .change_checked .change_it image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+.container .invoiceInformation .tai_type .tai_a .change_checked .change_it .it_name {
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .invoiceInformation .tai_type .tai_a .change_checked .change_it:last-child {
+  margin: 0;
+}
+.container .invoiceInformation .tai_type .tai_a .a_changed {
+  flex: 1;
+  height: 100%;
+}
+.container .invoiceInformation .tai_type .tai_a .a_changed input {
+  width: 100%;
+}
+.container .invoiceInformation .tai_type .up_load {
+  width: 100%;
+  background-color: #f7f8fa;
+  margin: 26rpx 0;
+}
+.container .invoiceInformation .tai_type .up_load .up_load_text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 148rpx;
+}
+.container .invoiceInformation .tai_type .up_load .up_load_text image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 26rpx;
+}
+.container .invoiceInformation .tai_type .up_load .up_load_text .uo_text {
+  font-size: 28rpx;
+  color: #323233;
+}
+.container .invoiceInformation .tai_type .zi_lism {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .tai_type .zi_lism .zi_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .invoiceInformation .tai_type .zi_lism .input_text {
+  flex: 1;
+}
+.container .invoiceInformation .tai_type .zi_lism:last-child {
+  border: none;
+}
+.container .invoiceInformation .tai_type .lit {
+  width: 100%;
+}
+.container .invoiceInformation .tai_type .lit .zi_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .tai_type .lit .zi_list .zi_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .invoiceInformation .tai_type .lit .zi_list .input_text {
+  flex: 1;
+}
+.container .invoiceInformation .tai_type .lit .zi_list:last-child {
+  border: none;
+}
+.container .invoiceInformation .ti_show {
+  width: 100%;
+  background-color: #fff;
+}
+.container .invoiceInformation .ti_show .sh_show {
+  width: 100%;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #3D444C;
+  font-weight: 500;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.container .invoiceInformation .ti_show .show_img {
+  width: 100%;
+  padding: 32rpx 0;
+  box-sizing: border-box;
+}
+.container .invoiceInformation .ti_show .show_img image {
+  width: 100%;
+  height: 400rpx;
+}
+.container .top_zi {
+  width: 100%;
+  font-size: 24rpx;
+  color: #2572FA;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  background: #f7f8fa;
+}
+.container .zi_info {
+  width: 100%;
+  padding: 0 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .zi_info .zi_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .zi_info .zi_list .zi_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .zi_info .zi_list .input_text {
+  flex: 1;
+}
+.container .zi_info .btnbuy {
+  width: 100%;
+  padding: 40rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.container .zi_info .btnbuy .btn_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .zi_info .btnbuy .btn_item .btnbuy__ {
+  height: 88rpx;
+  width: 100%;
+  color: #fff;
+  line-height: 88rpx;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 44px;
+  box-shadow: 0px 8px 24px 6px rgba(6, 27, 149, 0.15);
+}
+.container .zi_info .btnbuy .btn_item .btnbuy_b {
+  margin-left: 20rpx;
+  background: #ccc;
+}

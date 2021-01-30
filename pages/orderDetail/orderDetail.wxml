@@ -1,0 +1,181 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">订单详情</view>
+    </view>
+  </view>
+  <view class="health">
+    <view class="heal_list">
+      <view class="top_heal">
+        <view class="order_num">合同编码：{{detail.contract.contract_code}}</view>
+        <view class="order_status">{{detail.contract.license_plate}}</view>
+      </view>
+      <view class="lei">
+        <view class="mold">套餐类型：{{detail.package.package_name}}</view>
+        <view class="mold">套餐价格：￥{{detail.order_price}}</view>
+      </view>
+      <view class="out_time">
+        <view class="out_name">延保有效期：</view>
+        <view class="out_right_text">
+          <view class="lef">
+            {{detail.start_time}}00:00~{{detail.end_time}}24:00 或{{detail.kilometre_min}}公里~{{detail.kilometre_max}}公里（以先到条件为准）
+          </view>
+          <!-- <view class="ffccc"></view> -->
+        </view>
+      </view>
+      <view class="already">
+        <view class="free_of_charge">免费保养已用次数：{{detail.care_times_use}}次</view>
+        <view class="free_of_charge">免费保养剩余次数：{{detail.care_times_nouse}}次</view>
+      </view>
+    </view>
+    <view class="Oil_Type">
+      <view class="oil_name">机油类型</view>
+      <view class="oil_name">{{detail.package.oil_type}}</view>
+    </view>
+    <view class="usr_info">
+      <view class="t_user">用户信息</view>
+      <view class="t_user_A" wx:if="{{identity ==1}}">用户类型：个人用户</view>
+      <view class="t_user_A" wx:if="{{identity == 2}}">用户类型：公司客户</view>
+    </view>
+    <view class="zi_info">
+      <view class="zi_list">
+        <view class="zi_name" wx:if="{{identity==1}}">姓名</view>
+        <view class="zi_name" wx:if="{{identity==2}}">公司名称</view>
+        <input type="text" disabled="{{dissabled}}" wx:if="{{identity==1}}" class="input_text" value="{{detail.contract.realname}}" placeholder-class="input_placeholder" placeholder="请输入收件人姓名" />
+        <input type="text" disabled="{{dissabled}}" wx:if="{{identity==2}}" class="input_text" value="{{detail.contract.company_name}}" placeholder-class="input_placeholder" placeholder="请输入公司名称" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name">通讯地址</view>
+        <input type="text" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.address}}" placeholder-class="input_placeholder" placeholder="请输入收件人电话" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name">移动电话</view>
+        <input type="number" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.mobile}}" placeholder-class="input_placeholder" placeholder="请输入收件人地址" />
+      </view>
+      <view class="zi_list" wx:if="{{identity==1}}">
+        <view class="zi_name">身份证号</view>
+        <input type="text" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.idcard}}" placeholder-class="input_placeholder" placeholder="请输入收件人地址" />
+      </view>
+    </view>
+    <view class="usr_info">
+      <view class="t_user">车辆信息</view>
+    </view>
+    <view class="zi_info">
+      <view class="zi_list">
+        <view class="zi_name vin">VIN码\车架号</view>
+        <input type="text" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.vin_num}}" placeholder-class="input_placeholder" placeholder="请输入VIN码\车架号" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name vin">发动机号</view>
+        <input type="number" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.engine_num}}" placeholder-class="input_placeholder" placeholder="请输入发动机号" />
+      </view>
+      <view class="zi_list" wx:if="{{identity==1}}">
+        <view class="zi_name vin">开票日期</view>
+        <input type="text" disabled="{{dissabled}}" class="input_text" value="{{detail.contract.invoice_date}}" placeholder-class="input_placeholder" placeholder="新车暂未取得发票请填当前日期" />
+      </view>
+    </view>
+    <view class="usr_info" wx:if="{{care_log.length !=0}}">
+      <view class="t_user">保养记录</view>
+      <view class="t_user_A"></view>
+    </view>
+    <view class="list_litst">
+      <block wx:for="{{care_log}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="upkeepList">
+          <view class="upkeep">
+            <view class="upkeep_a">保养时间</view>
+            <view class="upkeep_b">{{item.createtime}}</view>
+          </view>
+          <view class="upkeep">
+            <view class="upkeep_a">实施经销店</view>
+            <view class="upkeep_b">{{item.store_name}}</view>
+          </view>
+          <view class="upkeep">
+            <view class="upkeep_a">保养套餐</view>
+            <view class="upkeep_b">基础保养使用{{detail.package.oil_type}}的机油型号</view>
+          </view>
+          <view class="upkeep">
+            <view class="upkeep_a">核销员</view>
+            <view class="upkeep_b">{{item.verifier_name}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="usr_info" wx:if="{{repair_log.length !=0}}">
+      <view class="t_user">保修记录</view>
+      <view class="t_user_A"></view>
+    </view>
+    <view class="list_litst">
+      <block wx:for="{{repair_log}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="upkeepList">
+          <view class="upkeep">
+            <view class="upkeep_a">保养时间</view>
+            <view class="upkeep_b">{{item.createtime}}</view>
+          </view>
+          <view class="upkeep">
+            <view class="upkeep_a">实施经销店</view>
+            <view class="upkeep_b">{{item.store_name}}</view>
+          </view>
+          <view class="upkeep">
+            <view class="upkeep_a">核销员</view>
+            <view class="upkeep_b">{{item.verifier_name}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="down_heal_btn" wx:if="{{per!=1}}">
+      <button class="look_ben  bgc_color" style="  font-weight:400" disabled="{{is_true}}" wx:if="{{detail.pay_type== 1 &&  detail.status== 0}}" catchtap="gotoOrderPay">
+        微信支付
+      </button>
+      <button class="look_ben    bgc_color2" style="  font-weight:400" disabled="{{is_true}}" wx:if="{{detail.pay_type== 1 &&  detail.status== 0}}" catchtap="offlinePay">
+        线下转账
+      </button>
+      <view class="look_ben  bgc_color" catchtap="cancelAfter" data-statusway="{{detail.status}}" data-wit="0" wx:if="{{status != 0}}">
+        保修核销
+      </view>
+      <view class="look_ben bgc_color2" catchtap="cancelAfter" data-nouse="{{detail.care_times_nouse}}" data-statusway="{{detail.status}}" data-wit="1" wx:if="{{status != 0}}">
+        保养核销
+      </view>
+      <button class="look_ben newben " style="  font-weight:400" disabled="{{is_true}}" wx:if="{{detail.pay_type== 1 &&  detail.status== 0}}" catchtap="remove">
+        取消订单
+      </button>
+      <view class="look_ben newsbtn" catchtap="lookContract" data-cont="{{detail.contract.contract_url}}">
+        查看合同
+      </view>
+      <view class="look_ben  newsbtn " wx:if="{{is_have_invoice == 0 &&  status !=0}}" catchtap="onInvoice">
+        申请开票
+      </view>
+      <view class="look_ben newsbtn" wx:if="{{detail.status!=0}}" data-is_have_invoice="{{detail.is_have_invoice}}" data-in_url="{{detail.invoice_url}}" catchtap="lookInvoice" data-ceurl="{{detail.invoice_url}}">
+        查看发票
+      </view>
+      <view class="look_ben  newsbtn " wx:if="{{detail.status!=0}}" data-is_have_invoice="{{detail.is_have_invoice}}" data-in_url="{{detail.invoice_url}}" catchtap="keepInvoice" data-ceurl="{{detail.invoice_url}}">
+        保存发票
+      </view>
+      <view class="look_ben  look_btn_color" wx:if="{{detail.pay_type==2 && status == 0}}" catchtap="lookShroffAccount">
+        查看服务商收款账号
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask" bindtap="toggleDialog" />
+    <view class="zan_dialog__container" wx:if="{{showDialog &&  statusWay != 2}}">
+      <view class="d_popup">
+        <view class="pup">
+          <image src="{{repair_code}}" wx:if="{{cancelA== 0}}" />
+          <image src="{{care_code}}" wx:if="{{cancelA== 1}}" />
+        </view>
+        <view class="gong">请出示给4S店服务顾问 进行扫码核销</view>
+        <view class="btnbuy">
+          <button bindtap="toggleDialog" class="btnbuy__" size="default">关闭</button>
+        </view>
+      </view>
+    </view>
+    <view class="tishi" wx:if="{{showDialog &&  statusWay == 2}}">
+      <view class="d_popup">
+        <view class="pup">提示</view>
+        <view class="gong">{{listError}}</view>
+        <view class="sure" bindtap="goswitchTab">确认</view>
+      </view>
+    </view>
+  </view>
+</view>

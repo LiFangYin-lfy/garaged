@@ -1,0 +1,129 @@
+page {
+  background-color: #fff;
+}
+
+.container {
+  .header {
+    width: 100%;
+    background: linear-gradient(180deg, #2574fb, #3138e0);
+    padding-bottom: 90rpx;
+    box-sizing: border-box;
+
+    .left_img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 32rpx 0;
+      box-sizing: border-box;
+      height: 88rpx;
+
+      image {
+        width: 32rpx;
+        height: 32rpx;
+      }
+
+      .title_oage {
+        flex: 1;
+        margin-right: 32rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+
+      }
+    }
+
+    .store_ct {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 36rpx 32rpx 32rpx;
+      box-sizing: border-box;
+
+      image {
+        width: 32rpx;
+        height: 32rpx;
+      }
+
+      .store_name {
+        flex: 1;
+        font-size: 32rpx;
+        color: #fff;
+        padding-left: 20rpx;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .store_list {
+    width: 100%;
+    padding: 32rpx;
+    box-sizing: border-box;
+    margin-top: -120rpx;
+
+    .lost_item {
+      width: 100%;
+
+      .lt_list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 26rpx;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 12rpx;
+        box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+        margin-bottom: 26rpx;
+
+        .lt_img {
+          width: 128rpx;
+          height: 128rpx;
+          border-radius: 8rpx;
+        }
+
+        .rt_box {
+          flex: 1;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          padding-left: 26rpx;
+          box-sizing: border-box;
+          height: 128rpx;
+
+          .top_title {
+            width: 100%;
+            font-size: 32rpx;
+            color: #323233;
+            font-weight: 600;
+          }
+
+          .center_a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            image {
+              width: 32rpx;
+              height: 32rpx;
+            }
+
+            .phone {
+              flex: 1;
+              padding-left: 5rpx;
+              box-sizing: border-box;
+              font-size: 24rpx;
+              color: #323233;
+            }
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+}

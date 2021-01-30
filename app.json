@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/customerCenter/customerCenter",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/changeStore/changeStore",
+    "pages/purchaseSuccess/purchaseSuccess",
+    "pages/consigneeAddress/consigneeAddress",
+    "pages/setmealDetail/setmealDetail",
+    "pages/setmealChange/setmealChange",
+    "pages/public/public",
+    "pages/invoiceInformation/invoiceInformation",
+    "pages/orderDetail/orderDetail",
+    "pages/verification/verification",
+    "pages/verificationPage/verificationPage",
+    "pages/closeApplication/closeApplication",
+    "pages/shroffAccount/shroffAccount",
+    "pages/articleDetails/articleDetails",
+    "pages/signature/signature",
+    "pages/contract/contract"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车行延保",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#fff",
+    "selectedColor": "#066DFF",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "/static/icon/icon_1.png",
+        "selectedIconPath": "/static/icon/icon_3.png"
+      },
+      {
+        "text": "客户中心",
+        "pagePath": "pages/customerCenter/customerCenter",
+        "iconPath": "/static/icon/icon_2.png",
+        "selectedIconPath": "/static/icon/icon_4.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

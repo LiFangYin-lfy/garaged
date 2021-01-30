@@ -1,0 +1,390 @@
+page {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  flex: 1;
+}
+.container .health .contract {
+  width: 100%;
+  height: 100%;
+}
+.container .health .contract .cenbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+}
+.container .health .contract .cenbox .cen_word {
+  width: 50%;
+  margin: 200rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .health .contract .cenbox .cen_word image {
+  width: 96rpx;
+  height: 100rpx;
+}
+.container .health .contract .cenbox .cen_word .word_text {
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #323233;
+}
+.container .health .contract .cenbox .cen_word .button_bm {
+  height: 88rpx;
+  width: 90%;
+  padding: 0;
+  margin: 50rpx auto;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: #fff;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .hetong_img {
+  width: 100%;
+  padding: 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .hetong_img image {
+  width: 100%;
+}
+.container .health .btns {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 32rpx 0;
+  box-sizing: border-box;
+  z-index: 100;
+  background-color: #fff;
+}
+.container .health .btns .true_hetong {
+  width: 100%;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .health .btns .true_hetong .box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.container .health .btns .true_hetong .box .click_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.container .health .btns .true_hetong .box .click_icon image {
+  width: 100%;
+}
+.container .health .btns .true_hetong .box .clickk {
+  font-size: 30rpx;
+  color: #323233;
+  margin-left: 20rpx;
+}
+.container .health .btns .true_hetong .dianzis {
+  width: 100%;
+}
+.container .health .btns .true_hetong .dianzis .button_bm {
+  height: 88rpx;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: #fff;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .btns .buy_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .btns .buy_btn .button_buy {
+  height: 72rpx;
+  width: 50%;
+  line-height: 72rpx;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: #fff;
+  font-size: 28rpx;
+  background: #969799;
+  border-radius: 40px;
+}
+.container .health .btns .buy_btn .button_buy:last-child {
+  margin: 0;
+}
+.container .health .btns .buy_btn .button_bt {
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border: 1rpx solid #f2f2f2;
+  margin-right: 20rpx;
+  color: #fff;
+}
+.container .health .btns .buy_btn .activehui {
+  color: #fff;
+  background: #969799;
+}
+.container .health .btns .buy_btn .activePath {
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  color: #fff;
+  width: 50%;
+}
+.container .sign_name_wrap {
+  width: 100%;
+  height: 100%;
+  background: #323233;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+.container .sign_name_wrap .sign_top_box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.container .sign_name_wrap .sign_top_box .view_top {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+.container .sign_name_wrap .sign_btns {
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  transform: rotate(90deg);
+  position: absolute;
+  left: -320rpx;
+  bottom: 435rpx;
+  z-index: 1009;
+}
+.container .sign_name_wrap .sign_btns .sign_clear {
+  font-size: 32rpx;
+  color: #323233;
+}
+.container .sign_name_wrap .sign_btns .sign_btn_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110rpx;
+}
+.container .sign_name_wrap .sign_btns .sign_btn_right .sign_btn {
+  width: 300rpx;
+  height: 88rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #ffffff;
+  border-radius: 44rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 88rpx;
+  text-align: center;
+}
+.container .sign_name_wrap .sign_btns .sign_btn_right .sign_btn2 {
+  width: 300rpx;
+  height: 88rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 44rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.container .sign_name_wrap .canvals {
+  flex: 1;
+  width: 90%;
+  height: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+  background-color: #323233;
+  position: relative;
+}
+.container .sign_name_wrap .canvals canvas {
+  width: 80%;
+  height: 85%;
+  background: #949495;
+  position: absolute;
+  left: 120rpx;
+  top: 200rpx;
+}
+.container .sign_name_wrap .canvals .te_coloe {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  font-size: 28rpx;
+  color: #fff;
+}
+.container .background_img {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  overflow: hidden;
+  z-index: 100;
+}
+.container .downbox {
+  width: 100%;
+  height: 540rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  z-index: 120;
+  background: #fff;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  border-radius: 32rpx 32rpx 0 0;
+}
+.container .downbox .imgupdown {
+  padding: 20rpx 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .downbox .imgupdown image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .downbox .list_down {
+  width: 100%;
+}
+.container .downbox .list_down .pt {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.container .downbox .list_down .pt .pt_icon {
+  font-size: 40rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .downbox .list_down .pt .pt_price {
+  font-size: 56rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .downbox .list_down .change_stay {
+  width: 100%;
+  text-align: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #3D444C;
+}
+.container .downbox .btn_bue {
+  width: 100%;
+  padding: 10rpx 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .downbox .btn_bue .btn_icon {
+  height: 88rpx;
+  width: 686rpx;
+  color: #fff;
+  line-height: 88rpx;
+  text-align: center;
+  font-weight: 400;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  box-sizing: border-box;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 12rpx;
+  box-shadow: 0rpx 8rpx 24rpx 6rpx rgba(6, 27, 149, 0.15);
+}
+.container .downbox .btn_bue .other_color {
+  background: #44BB00;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 8rpx 24rpx 6rpx rgba(6, 27, 149, 0.15);
+  width: 686rpx;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .downbox .btn_bue .other_color .bu_name {
+  font-size: 28rpx;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.container .downbox .btn_bue .other_color .bu_small_name {
+  font-size: 24rpx;
+  color: #fff;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,129 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">确认发票信息</view>
+    </view>
+  </view>
+  <form action="" bindsubmit="formSubmit">
+    <view class="invoiceInformation">
+      <view class="infor" wx:if="{{wait == 2 || wait == 3}}">
+        <view class="in_name">{{account.account_header}}</view>
+        <view class="in_list">
+          <view class="in_item">
+            <view class="in_left">公司名称</view>
+            <view class="in_right">{{account.account_company_name}}</view>
+          </view>
+          <view class="in_item">
+            <view class="in_left">开户行</view>
+            <view class="in_right">{{account.account_bank}}</view>
+          </view>
+          <view class="in_item">
+            <view class="in_left">收款账号</view>
+            <view class="in_right">{{account.account}}</view>
+          </view>
+        </view>
+        <view class="set_warn">{{account.account_remark}}</view>
+        <view class="btns">
+          <view class="changeItem item_a" bindtap="copyText">复制文本</view>
+          <view class="changeItem item_a" catchtap="savetheimage">保存图片</view>
+          <button class="changeItem item_b" open-type="share">保存并转发</button>
+        </view>
+      </view>
+      <view class="tai_type" wx:if="{{wait ==2}}">
+        <view class="tai_a">
+          <view class="a_name">抬头类型</view>
+          <view class="change_checked">
+            <view class="change_it" bindtap="canporyOrPer" data-way="0">
+              <image src="{{imagesUrl}}/img_x.png" wx:if="{{is_cloose == 1 && is_color ==true}}" />
+              <image src="{{imagesUrl}}/img_t.png" wx:if="{{is_cloose == 2 && is_color ==false}}" />
+              <view class="it_name">增值税普通发票</view>
+            </view>
+            <view class="change_it" bindtap="canporyOrPer" data-way="1">
+              <image src="{{imagesUrl}}/img_x.png" wx:if="{{is_cloose == 2 && is_color ==false}}" />
+              <image src="{{imagesUrl}}/img_t.png" wx:if="{{is_cloose == 1 && is_color ==true}}" />
+              <view class="it_name">增值税专用发票</view>
+            </view>
+          </view>
+        </view>
+        <view class="tai_a">
+          <view class="a_name">备注说明</view>
+          <view class="a_changed">
+            <input type="text" placeholder="请输入备注说明" placeholder-class="input_placeholder" value="{{remark}}" name="remark" bindinput="getbeizhu" />
+          </view>
+        </view>
+        <view class="zi_lism" wx:if="{{is_cloose == 1 && is_color ==true}}">
+          <view class="zi_name">企业名称</view>
+          <input type="text" class="input_text" value="{{company_name}}" name="companyname" placeholder-class="input_placeholder" placeholder="请填写企业名称" />
+        </view>
+        <view class="zi_lism">
+          <view class="zi_name">税号</view>
+          <input type="text" class="input_text" value="{{tax_number}}" name="taxnumber" placeholder-class="input_placeholder" placeholder="请填写纳税人识别号" />
+        </view>
+        <view class="up_load" wx:if="{{header!= 0}}">
+          <view class="up_load_text" bindtap="invoiceTitle">
+            <image src="{{imagesUrl}}/img_o.png" />
+            <view class="uo_text">选择发票抬头</view>
+          </view>
+        </view>
+        <view class="lit" wx:if="{{is_cloose == 2 && is_color ==false}}">
+          <view class="zi_list">
+            <view class="zi_name">企业名称</view>
+            <input type="text" class="input_text" value="{{company_name}}" name="companyname" placeholder-class="input_placeholder" placeholder="请填写企业名称" />
+          </view>
+          <view class="zi_list">
+            <view class="zi_name">税号</view>
+            <input type="text" class="input_text" value="{{tax_number}}" name="taxnumber" placeholder-class="input_placeholder" placeholder="请填写纳税人识别号" />
+          </view>
+          <view class="zi_list">
+            <view class="zi_name">地址</view>
+            <input type="text" class="input_text" value="{{company_address}}" name="companyaddress" placeholder-class="input_placeholder" placeholder="请填写地址" />
+          </view>
+          <view class="zi_list">
+            <view class="zi_name">电话</view>
+            <input type="number" maxlength="11" value="{{telephone}}" name="telephone" class="input_text" placeholder-class="input_placeholder" placeholder="请填写电话" />
+          </view>
+          <view class="zi_list">
+            <view class="zi_name">开户行</view>
+            <input type="text" class="input_text" value="{{bank_name}}" name="bankname" placeholder-class="input_placeholder" placeholder="请填写开户行" />
+          </view>
+          <view class="zi_list">
+            <view class="zi_name">银行账户</view>
+            <input type="number" class="input_text" value="{{bank_account}}" name="bankaccount" placeholder-class="input_placeholder" placeholder="请填写银行账户" />
+          </view>
+        </view>
+      </view>
+      <view class="ti_show" wx:if="{{wait ==4}}">
+        <view class="sh_show">新参数</view>
+        <view class="show_img">
+          <image src="{{imagesUrl}}/img_d.png" />
+        </view>
+      </view>
+    </view>
+    <view class="top_zi">*确认发票快递收件信息</view>
+    <view class="zi_info">
+      <view class="zi_list">
+        <view class="zi_name">姓名</view>
+        <input type="text" name="contact" value="{{contact}}" class="input_text" placeholder-class="input_placeholder" placeholder="请输入收件人姓名" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name">电话</view>
+        <input type="number" name="mobile" maxlength="11" value="{{mobile}}" class="input_text" placeholder-class="input_placeholder" placeholder="请输入收件人电话" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name">地址</view>
+        <input type="text" name="address" value="{{address}}" class="input_text" placeholder-class="input_placeholder" placeholder="请输入收件人地址" />
+      </view>
+      <view class="btnbuy">
+        <view class="btn_item" wx:if="{{is_cloose == 1 && is_color ==true}}">
+          <button class="btnbuy__" size="default" form-type="submit">确认</button>
+          <!-- <button class="btnbuy__ btnbuy_b" size="default" bindtap="goSuccess">暂不需发票</button> -->
+        </view>
+        <view class="btn_item" wx:if="{{is_cloose == 2 && is_color ==false}}">
+          <button class="btnbuy__" size="default" form-type="submit">确认</button>
+          <!-- <button class="btnbuy__ btnbuy_b" size="default" bindtap="goSuccess">暂不需发票</button> -->
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

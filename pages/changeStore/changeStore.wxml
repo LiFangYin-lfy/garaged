@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">研孚汽车延保</view>
+    </view>
+    <view class="store_ct">
+      <image src="{{imagesUrl}}/img_i.png" alt="" />
+      <view class="store_name">选择门店</view>
+    </view>
+  </view>
+  <view class="store_list">
+    <view class="lost_item">
+      <block wx:for="{{storeList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="lt_list" bindtap="goToStore" data-item="{{item}}">
+          <image src="{{item.image}}" class="lt_img" />
+          <view class="rt_box">
+            <view class="top_title">{{item.store_name}}</view>
+            <view class="center_a">
+              <image src="{{imagesUrl}}/img_f.png" />
+              <view class="phone title_content1">{{item.mobile}}</view>
+            </view>
+            <view class="center_a  center_b">
+              <image src="{{imagesUrl}}/img_g.png" />
+              <view class="phone_text  phone title_content1">{{item.address}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

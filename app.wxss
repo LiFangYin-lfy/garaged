@@ -1,0 +1,58 @@
+/**app.wxss**/
+page,
+view,
+text,
+swiper,
+swiper-item,
+navigator,
+image {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+text {
+  font-family: PingFang-SC-Bold;
+  color: #06121E;
+}
+
+page {
+  overflow-x: hidden;
+}
+
+.title_content1 {
+  color: rgba(6, 18, 31, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.title_content2 {
+  color: rgba(6, 18, 31, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.title_content3 {
+  color: rgba(6, 18, 31, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.input_placeholder {
+  color: #BDC4CE;
+  font-size: 28rpx;
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">电子签名</view>
+    </view>
+  </view>
+  <!-- 签名弹窗 -->
+  <view class='sign_name_wrap' wx:if="{{signStatus}}">
+    <cover-view class="sign_btns">
+      <cover-view class='sign_clear' bindtap="cleardraw">清除签名</cover-view>
+      <cover-view class='sign_btn_right'>
+        <!-- <cover-image class='sign_btn' bindtap='closeCanvasFun' src='../../images/cuo.png'></cover-image>
+        <cover-image class='sign_btn' bindtap="setSign" src='../../images/dui.png'></cover-image> -->
+      </cover-view>
+    </cover-view>
+    <canvas style="width: {{canvasw}}px; height: {{canvash}}px" class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback"></canvas>
+  </view>
+</view>

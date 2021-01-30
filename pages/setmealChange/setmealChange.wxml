@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">选择套餐</view>
+    </view>
+  </view>
+  <view class="meal">
+    <block wx:for="{{setmeal}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="meal_list" bindtap="setmealDetail" data-id="{{item.id}}">
+        <view class="set_namw">
+          <view class="meal_name">{{item.package_name}}</view>
+          <view class="meal_money">
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{item.package_price}}</view>
+            </view>
+            <view class="money">¥{{item.line_price}}</view>
+          </view>
+        </view>
+        <view class="warranty_coverage">保修范围：{{item.care}}</view>
+        <view class="engine_oil">
+          <view class="oil_type">机油类型：{{item.oil_type}}</view>
+          <view class="free_num">套餐内免费保养次数：{{item.care_times}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

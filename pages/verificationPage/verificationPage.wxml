@@ -1,0 +1,106 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">保养核销操作页</view>
+    </view>
+  </view>
+  <view class="health">
+    <view class="heal_list">
+      <view class="top_heal">
+        <view class="order_num">合同编码：{{verification.contract.contract_code}}</view>
+        <view class="order_status">{{verification.contract.license_plate}}</view>
+      </view>
+      <view class="lei">
+        <view class="mold">套餐类型：{{verification.package.package_name}}</view>
+      </view>
+      <view class="out_time">
+        <view class="out_name">延保有效期：</view>
+        <view class="out_right_text">
+          <view class="lef">
+            {{verification.start_time}}00:00~{{verification.end_time}}24:00  或{{verification.kilometre_min}}公里~{{verification.kilometre_max}}公里（以先到条件为准）
+          </view>
+          <!-- <view class="ffccc"></view> -->
+        </view>
+      </view>
+      <view class="already">
+        <view class="free_of_charge">免费保养已用次数：{{verification.care_times_use}}次</view>
+        <view class="free_of_charge">免费保养剩余次数：{{verification.care_times_nouse}}次</view>
+      </view>
+    </view>
+    <view class="Oil_Type">
+      <view class="oil_name">机油类型</view>
+      <view class="oil_name">{{verification.package.oil_type}}</view>
+    </view>
+    <view class="usr_info">
+      <view class="t_user">用户信息</view>
+      <view class="t_user_A" wx:if="{{identity ==1}}">用户类型：个人用户</view>
+      <view class="t_user_A" wx:if="{{identity==2}}">用户类型：公司客户</view>
+    </view>
+    <view class="zi_info">
+      <view class="zi_list">
+        <view class="zi_name">姓名</view>
+        <input type="text" class="input_text" disabled="true" value="{{verification.contract.realname}}" placeholder-class="input_placeholder" placeholder="请输入收件人姓名" />
+      </view>
+      <view class="zi_list">
+        <view class="zi_name">移动电话</view>
+        <input type="number" maxlength="11" disabled="true" value="{{verification.contract.mobile}}" class="input_text" placeholder-class="input_placeholder" placeholder="请输入收件人电话" />
+      </view>
+    </view>
+  </view>
+  <view class="btnbuy">
+    <view class="bu">
+      <button class="btnbuy_look  btnbuy__" size="default" wx:if="{{contract_url!=''}}" catchtap="lookContract">
+        查看合同
+      </button>
+      <button class="btnbuy__" size="default" bindtap="confirm" disabled="{{clickButton}}">
+        确认核销
+      </button>
+    </view>
+  </view>
+  <!-- 授权登录 -->
+  <view class="login">
+    <!-- 屏幕背景变暗的背景 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!-- 弹出框 -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+      <view class="phoneshou">
+        <view class="padlock" catchtap="hideModal">
+          <image src="{{imagesUrl}}/icon_a.png" />
+        </view>
+        <view class="phone_title">请先授权登录</view>
+        <view class="tips_content">为了更好的为你提供服务，请允许微信授权后再使用功能</view>
+        <view class="downbtn">
+          <button class="btn" open-type="getUserInfo" bindgetuserinfo="wechatWarranty">
+            <image src="{{imagesUrl}}/icon_c.png" />
+            授权登录
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask" />
+    <view class="zan_dialog__container">
+      <view class="d_popup">
+        <view class="gong">{{listError}}</view>
+        <view class="sure" bindtap="goswitchTab">确认</view>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog2 ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog2}}">
+    <view class="zan_dialog__mask" />
+    <view class="zan_dialog__container">
+      <view class="d_popup">
+        <view class="box_name">提示</view>
+        <view class="gong_box">
+          <view class="box_inp">当前公里数</view>
+          <view class="inp_input">
+            <input bindinput="getCount" type="number" placeholder-style="color:#7D7E80 ; font-size : 24rpx" class="input_calss" placeholder="请输入当前公里数" />
+          </view>
+        </view>
+        <view class="sure" bindtap="goswitchTab2">确认</view>
+      </view>
+    </view>
+  </view>
+</view>

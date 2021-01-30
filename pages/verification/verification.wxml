@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">核销员历史记录</view>
+    </view>
+  </view>
+  <!-- <view class="search_lis">
+    <view class="search">
+      <image src="{{imagesUrl}}/img_k.png" />
+      <input confirm-type="search" bindinput="getInput" name="input" confirm-type="search" bindconfirm="searchInput" type="text" class="search_input" placeholder="输入相关车牌进行搜索" placeholder-class="input_placeholder" />
+    </view>
+  </view> -->
+  <view class="health">
+    <block wx:for="{{verification}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="heal_list" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="top_heal">
+          <view class="order_num">合同编码：{{item.contract.contract_code}}</view>
+        </view>
+        <view class="lei">
+          <view class="mold">套餐类型：{{item.package.package_name}}</view>
+          <view class="mold">车牌号：{{item.contract.license_plate}}</view>
+        </view>
+        <view class="out_time">
+          <view class="out_name">延保有效期：</view>
+          <view class="out_right_text">
+            <view class="lef">
+              {{item.start_time}}00:00~{{item.end_time}}24:00  或{{item.kilometre_min}}公里~{{item.kilometre_max}}公里
+            </view>
+            <view class="ffccc">（以先到条件为准）</view>
+          </view>
+        </view>
+        <view class="already">
+          <view class="free_of_charge">免费保养已用次数：{{item.care_times_use}}次</view>
+          <view class="free_of_charge">免费保养剩余次数：{{item.care_times_nouse}}次</view>
+        </view>
+        <view class="last_time">上次到店时间：{{item.arrival_time}}</view>
+        <view class="down_heal_btn">
+          <view class="look_ben" catchtap="goDetail" data-id="{{item.id}}">查看详情</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="btnbuy">
+    <button class="btnbuy__" size="default" formType="submit" bindtap="RichScan">扫一扫</button>
+  </view>
+</view>

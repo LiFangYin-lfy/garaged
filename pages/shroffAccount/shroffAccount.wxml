@@ -1,0 +1,49 @@
+<view class="container">
+  <image src="{{imagesUrl}}/img_b.png" class="downbg" />
+  <div class="b">
+    <view class="header">
+      <view class="s" style='padding-top:{{statusTop}}px'></view>
+      <view class="left_img">
+        <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+        <view class="title_oage">收款账号</view>
+      </view>
+    </view>
+    <view class="health">
+      <view class="center_img">
+        <view class="d_bximg">
+          <view class="center_title">{{account.account_header}}</view>
+          <view class="c_s_bx">
+            <view class="sm_box">
+              <view class="small_t">公司名称</view>
+              <view class="t_company">
+                <view class="center_text  title_content1">{{account.account_company_name}}</view>
+                <view class="copy" bindtap='copyBtn' data-type='1'>复制</view>
+              </view>
+            </view>
+            <view class="sm_box">
+              <view class="small_t">开户行</view>
+              <view class="t_company">
+                <view class="center_text  title_content1">{{account.account_bank}}</view>
+                <view class="copy" bindtap='copyBtn' data-type='2'>复制</view>
+              </view>
+            </view>
+            <view class="sm_box">
+              <view class="small_t">收款账号</view>
+              <view class="t_company  title_content1">
+                <view class="center_text">{{account.account}}</view>
+                <view class="copy" bindtap='copyBtn' data-type='3'>复制</view>
+              </view>
+            </view>
+            <view class="down_cenre">{{account.account_remark}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="btns">
+        <view class="buy_btn">
+          <button class="button_buy button_bt" bindtap="savetheimage">保存图片</button>
+          <button class="button_buy" bindtap="trueOnclick">确认</button>
+        </view>
+      </view>
+    </view>
+  </div>
+</view>

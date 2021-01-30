@@ -1,0 +1,99 @@
+page {
+  background: #FFFFFF;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx 0;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .tai_head {
+  width: 100%;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #2572FA;
+  background-color: #F7F8FA;
+}
+.container .ress {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .ress .list_address {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+  border-top: 1rpx solid #f2f2f2;
+}
+.container .ress .list_address .add_name {
+  width: 200rpx;
+  font-size: 28rpx;
+  color: #323232;
+}
+.container .ress .list_address .add_text {
+  flex: 1;
+}
+.container .ress .list_address .add_text .r_input {
+  width: 100%;
+}
+.container .ress .list_address:last-child {
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.container .btnbuy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: #fff;
+}
+.container .btnbuy .btn_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .btnbuy .btn_item .btnbuy__ {
+  height: 88rpx;
+  width: 100%;
+  color: #fff;
+  line-height: 88rpx;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 28rpx;
+  background: linear-gradient(223deg, #2574fb 1%, #3138e0 98%);
+  border-radius: 44px;
+  box-shadow: 0px 8px 24px 6px rgba(6, 27, 149, 0.15);
+}
+.container .btnbuy .btn_item .btnbuy_b {
+  margin-left: 20rpx;
+  background: #ccc;
+}

@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">套餐详情</view>
+    </view>
+    <view class="meal_box">
+      <view class="meal_item">
+        <view class="meal_list">
+          <view class="set_namw">
+            <view class="meal_name">{{SetDeatil.package_name}}</view>
+            <view class="meal_money">
+              <view class="pt">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{SetDeatil.package_price}}</view>
+              </view>
+              <view class="money">¥{{SetDeatil.line_price}}</view>
+            </view>
+          </view>
+          <view class="warranty_coverage">保修范围：{{SetDeatil.care}}</view>
+          <view class="engine_oil">
+            <view class="oil_type">机油类型：{{SetDeatil.oil_type}}</view>
+            <view class="free_num">套餐内免费保养次数：{{SetDeatil.care_times}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="outTime">
+    <view class="text_time">延保服务有效期</view>
+    <view class="small_text">
+      {{SetDeatil.start_time}}0:00~{{SetDeatil.end_time}}24:00  或{{SetDeatil.kilometre_min}}公里~{{SetDeatil.kilometre_max}}公里（以先到条件为准）
+    </view>
+  </view>
+  <view class="out_details">
+    <view class="text_time">套餐说明</view>
+    <!-- <view class="details_img">
+      <rich-text nodes="{{content}}"></rich-text>
+    </view> -->
+    <view class="details_img">
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+  </view>
+  <view class="btnbuy">
+    <button class="btnbuy__" size="default" bindtap="orderNow" data-price="{{SetDeatil.package_price}}">
+      立即下单
+    </button>
+  </view>
+</view>

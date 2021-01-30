@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header" style="padding-top:{{statusTop}}px">
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">发票收件地址</view>
+    </view>
+  </view>
+  <view class="tai_head">*确认发票快递收件信息</view>
+  <form action="" bindsubmit="submitForm">
+    <view class="ress">
+      <view class="list_address">
+        <view class="add_name">收件人</view>
+        <view class="add_text">
+          <input type="text" class="r_input" name="contact" value="{{contact}}" placeholder="请输入收件人" placeholder-class="input_placeholder" />
+        </view>
+      </view>
+      <view class="list_address">
+        <view class="add_name">收件人电话</view>
+        <view class="add_text">
+          <input type="number" class="r_input" name="mobile" value="{{mobile}}" maxlength="11" placeholder="请输入收件人手机号" placeholder-class="input_placeholder" />
+        </view>
+      </view>
+      <view class="list_address">
+        <view class="add_name">收件地址</view>
+        <view class="add_text">
+          <input type="text" class="r_input" name="address" value="{{address}}" placeholder="请输入收件地址" placeholder-class="input_placeholder" />
+        </view>
+      </view>
+    </view>
+    <view class="btnbuy">
+      <view class="btn_item">
+        <button class="btnbuy__" size="default" formType="submit">提交</button>
+        <!-- <button class="btnbuy__ btnbuy_b" size="default" bindtap="goSuccess">暂不需发票</button> -->
+      </view>
+    </view>
+  </form>
+</view>

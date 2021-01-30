@@ -1,0 +1,121 @@
+page {
+  background: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+
+  .header {
+    width: 100%;
+    background: linear-gradient(180deg, #2574fb, #3138e0);
+
+    .left_img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 32rpx;
+      box-sizing: border-box;
+      height: 88rpx;
+
+      image {
+        width: 32rpx;
+        height: 32rpx;
+      }
+
+      .title_oage {
+        flex: 1;
+        margin-right: 32rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+
+      }
+    }
+  }
+
+  .meal {
+    width: 100%;
+    padding: 32rpx;
+    box-sizing: border-box;
+
+    .meal_list {
+      width: 100%;
+      margin-bottom: 24rpx;
+      padding: 26rpx 32rpx;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 12rpx;
+      box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+
+      .set_namw {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 26rpx;
+        border-bottom: 1rpx solid #f2f2f2;
+
+        .meal_name {
+          font-size: 32rpx;
+          color: #323233;
+          font-weight: 500;
+        }
+
+        .meal_money {
+          display: flex;
+          align-items: baseline;
+
+          .pt {
+            display: flex;
+            align-items: baseline;
+
+            .pt_icon {
+              font-size: 26rpx;
+              color: #FF4444;
+              font-weight: 500;
+
+            }
+
+            .pt_price {
+              font-size: 32rpx;
+              color: #FF4444;
+              font-weight: 500;
+
+            }
+          }
+
+          .money {
+            font-size: 24rpx;
+            color: #969799;
+            text-decoration: line-through;
+            margin-left: 20rpx;
+          }
+        }
+
+      }
+
+      .warranty_coverage {
+        width: 100%;
+        padding: 20rpx 0;
+        box-sizing: border-box;
+        font-size: 24rpx;
+        color: #323233;
+      }
+
+      .engine_oil {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .oil_type,
+        .free_num {
+          font-size: 24rpx;
+          color: #323233;
+        }
+      }
+    }
+  }
+}

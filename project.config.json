@@ -1,0 +1,269 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.1",
+  "appid": "wx2d79503f80b44b1b",
+  "projectname": "garage",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/changeStore/changeStore",
+          "pathName": "pages/changeStore/changeStore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/customerCenter/customerCenter",
+          "pathName": "pages/customerCenter/customerCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/purchaseSuccess/purchaseSuccess",
+          "pathName": "pages/purchaseSuccess/purchaseSuccess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consigneeAddress/consigneeAddress",
+          "pathName": "pages/consigneeAddress/consigneeAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setmealChange/setmealChange",
+          "pathName": "pages/setmealChange/setmealChange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/invoiceInformation/invoiceInformation",
+          "pathName": "pages/invoiceInformation/invoiceInformation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/verification/verification",
+          "pathName": "pages/verification/verification",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/verificationPage/verificationPage",
+          "pathName": "pages/verificationPage/verificationPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试",
+          "pathName": "pages/public/public",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setmealDetail/setmealDetail",
+          "pathName": "pages/setmealDetail/setmealDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/closeApplication/closeApplication",
+          "pathName": "pages/closeApplication/closeApplication",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shroffAccount/shroffAccount",
+          "pathName": "pages/shroffAccount/shroffAccount",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/signature/signature",
+          "pathName": "pages/signature/signature",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/purchaseSuccess/purchaseSuccess",
+          "pathName": "pages/purchaseSuccess/purchaseSuccess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/closeApplication/closeApplication",
+          "pathName": "pages/closeApplication/closeApplication",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/invoiceInformation/invoiceInformation",
+          "pathName": "pages/invoiceInformation/invoiceInformation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setmealChange/setmealChange",
+          "pathName": "pages/setmealChange/setmealChange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setmealDetail/setmealDetail",
+          "pathName": "pages/setmealDetail/setmealDetail",
+          "query": "package_id=1 contract_id=79",
+          "scene": null
+        },
+        {
+          "name": "pages/setmealDetail/setmealDetail",
+          "pathName": "pages/setmealDetail/setmealDetail",
+          "query": "package_id=1&contract_id=79",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "package_id=15&contract_id=210&price=0.01",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "package_id=16&contract_id=212",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "package_id=15&contract_id=215&price=0.01",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "package_id=15&contract_id=218&price=0.01",
+          "scene": null
+        },
+        {
+          "name": "pages/setmealDetail/setmealDetail",
+          "pathName": "pages/setmealDetail/setmealDetail",
+          "query": "package_id=3&contract_id=747",
+          "scene": null
+        },
+        {
+          "name": "pages/setmealDetail/setmealDetail",
+          "pathName": "pages/setmealDetail/setmealDetail",
+          "query": "package_id=3&contract_id=748",
+          "scene": null
+        },
+        {
+          "name": "pages/customerCenter/customerCenter",
+          "pathName": "pages/customerCenter/customerCenter",
+          "query": "package_id=3&contract_id=748",
+          "scene": null
+        },
+        {
+          "name": "pages/consigneeAddress/consigneeAddress",
+          "pathName": "pages/consigneeAddress/consigneeAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/invoiceInformation/invoiceInformation",
+          "pathName": "pages/invoiceInformation/invoiceInformation",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

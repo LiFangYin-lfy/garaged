@@ -1,0 +1,219 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">保修核销申请</view>
+    </view>
+  </view>
+  <view class="health">
+    <form action="" bindsubmit="closeSubmit">
+      <view class="lits">
+        <view class="lt_item">
+          <view class="ft_left">车牌</view>
+          <view class="input_in">
+            <input type="text" class="input_class" value="{{license_plate}}" name="license_plate" bindblur="blurclick" bindconfirm="getconfirm" placeholder="请输入车牌号" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+        <view class="lt_item">
+          <view class="ft_left">公里数</view>
+          <view class="input_in">
+            <input type="number" class="input_class" disabled="true" value="{{current_kilometers}}" name="current_kilometers" placeholder="请输入公里数" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+        <view class="lt_item">
+          <view class="ft_left">车架号</view>
+          <view class="input_in">
+            <input type="text" class="input_class" disabled="true" value="{{vin_num}}" name="vin_num" placeholder="请输入车架号" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+        <view class="lt_item">
+          <view class="ft_left">故障描述</view>
+          <view class="input_in">
+            <input type="text" class="input_two " value="{{repair_desc}}" name="repair_desc" placeholder="请输入故障描述" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+      </view>
+      <view class="it_one">
+        <view class="tx_title">
+          <view class="keep">维修工时费</view>
+          <image src="{{imagesUrl}}/img_p.png" bindtap="openA" />
+        </view>
+        <view class="s_serial">
+          <view class="ser_num">
+            <view class="ser_item">序号</view>
+            <view class="ser_item  ser_i">项目</view>
+            <view class="ser_item">工时费</view>
+            <view class="ser_item">操作</view>
+          </view>
+          <block wx:for="{{guarantee}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="ser_num ser_list">
+              <view class="ser_item">{{item.serial}}</view>
+              <view class="ser_item ser_i">{{item.project}}</view>
+              <view class="ser_item">¥{{item.care_fee}}</view>
+              <view class="ser_item" bindtap="deltee" data-index="{{index}}">删除</view>
+            </view>
+          </block>
+          <view class="total_money">工时费合计：{{guaranteeTotal}}元</view>
+        </view>
+      </view>
+      <view class="it_one">
+        <view class="tx_title">
+          <view class="keep">更换零件项目</view>
+          <image src="{{imagesUrl}}/img_p.png" bindtap="openB" />
+        </view>
+        <view class="s_serial">
+          <view class="ser_num">
+            <view class="ser_item">序号</view>
+            <view class="ser_item">零件编号</view>
+            <view class="ser_item">名称</view>
+            <view class="ser_item">单价</view>
+            <view class="ser_item">数量</view>
+            <view class="ser_item">小计</view>
+            <view class="ser_item">操作</view>
+          </view>
+          <block wx:for="{{upkeep}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="ser_num ser_list">
+              <view class="ser_item">{{item.serialB}}</view>
+              <view class="ser_item ">{{item.part_code}}</view>
+              <view class="ser_item ">{{item.part_name}}</view>
+              <view class="ser_item ">¥{{item.part_price}}</view>
+              <view class="ser_item ">{{item.part_num}}</view>
+              <view class="ser_item">¥{{item.total}}</view>
+              <view class="ser_item" bindtap="delkeep" data-index="{{index}}">删除</view>
+            </view>
+          </block>
+          <view class="total_money">零件费总计：{{upkeepTotal}}元</view>
+        </view>
+      </view>
+      <view class="uploaded " style="padding-top:32rpx;">
+        <view class="up_title">上传结算单据</view>
+        <view class='uploader_img'>
+          <view class='uploader_list' wx:for="{{statementUrl}}" wx:key="index" wx:for-item="item" wx:for-index='index'>
+            <image src='{{item}}' class="pictures" data-index="{{index}}" mode="scaleToFill" catchtap='previewImga' />
+            <image class='delete' data-index="{{index}}" src='{{imagesUrl}}/icon_b.png' mode="widthFix" catchtap='deleteImga' />
+          </view>
+          <view class='upAdd' bindtap='chooseImg' data-send="0" wx:if='{{statementUrl.length < 10}}'>
+            <image src="{{imagesUrl}}/img_l.png" />
+          </view>
+        </view>
+      </view>
+      <view class="uploaded">
+        <view class="up_title">维修作业照片上传</view>
+        <view class='uploader_img'>
+          <view class='uploader_list' wx:for="{{repair_imagesUrl}}" wx:key="index" wx:for-item="item" wx:for-index='index'>
+            <image src='{{item}}' class="pictures" data-index="{{index}}" mode="scaleToFill" catchtap='previewImgb' />
+            <image class='delete' data-index="{{index}}" src='{{imagesUrl}}/icon_b.png' mode="widthFix" catchtap='deleteImb' />
+          </view>
+          <view class='upAdd' bindtap='chooseImg' data-send="1" wx:if='{{repair_imagesUrl.length < 10}}'>
+            <image src="{{imagesUrl}}/img_l.png" />
+          </view>
+        </view>
+      </view>
+      <view class="btnbuy">
+        <button class="btnbuy__" size="default" formType="submit">提交</button>
+      </view>
+    </form>
+  </view>
+  <!-- 弹窗1 -->
+  <view class="popup" wx:if="{{showpopup}}" catchtap="clickpup"></view>
+  <view class="popupbox" wx:if="{{showpopup}}">
+    <view class="clickpup_a" wx:if="{{open==1}}">
+      <form action="" bindsubmit="clickOpenA">
+        <view class="poptitle">添加维修工时费</view>
+        <view class="popcontent">
+          <view class="x_name">
+            <view class="x_i_name">项目名称</view>
+            <view class="x_inpur">
+              <input placeholder="请填写项目名称" placeholder-class="input_placeholder" name="project" />
+            </view>
+          </view>
+          <view class="x_name">
+            <view class="x_i_name">工时费（元）</view>
+            <view class="x_inpur">
+              <input placeholder="请填写工时费" type="number" placeholder-class="input_placeholder" name="care_fee" />
+            </view>
+          </view>
+        </view>
+        <button class="popbtn" form-type="submit">确认</button>
+      </form>
+    </view>
+    <view class="clickpup_b" wx:if="{{open==2}}">
+      <form action="" bindsubmit="clickOpenB">
+        <view class="poptitle">添加更换零件项目</view>
+        <view class="popcontent">
+          <view class="x_name">
+            <view class="x_i_name">零件编号</view>
+            <view class="x_inpur">
+              <input placeholder="请填写零件编号" type="number" name="part_code" placeholder-class="input_placeholder" />
+            </view>
+          </view>
+          <view class="x_name">
+            <view class="x_i_name">零件名称</view>
+            <view class="x_inpur">
+              <input placeholder="请填写零件名称" name="part_name" placeholder-class="input_placeholder" />
+            </view>
+          </view>
+          <view class="x_name">
+            <view class="x_i_name">零件单价</view>
+            <view class="x_inpur">
+              <input placeholder="请填写零件单价" type="number" name="part_price" placeholder-class="input_placeholder" />
+            </view>
+          </view>
+          <view class="x_name">
+            <view class="x_i_name">零件数量</view>
+            <view class="x_inpur">
+              <input placeholder="请填写零件数量" type="number" name="part_num" placeholder-class="input_placeholder" />
+            </view>
+          </view>
+        </view>
+        <button class="popbtn" form-type="submit">确认</button>
+      </form>
+    </view>
+  </view>
+  <!-- 授权登录 -->
+  <view class="login">
+    <!-- 屏幕背景变暗的背景 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!-- 弹出框 -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+      <view class="phoneshou">
+        <view class="padlock" catchtap="hideModal">
+          <image src="{{imagesUrl}}/icon_a.png" />
+        </view>
+        <view class="phone_title">请先授权登录</view>
+        <view class="tips_content">为了更好的为你提供服务，请允许微信授权后再使用功能</view>
+        <view class="downbtn">
+          <button class="btn" open-type="getUserInfo" bindgetuserinfo="wechatWarranty">
+            <image src="{{imagesUrl}}/icon_c.png" />
+            授权登录
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{  showDlog ? 'zan_dialog_show' : '' }}" wx:if="{{showDlog}}">
+    <view class="zan_dialog__mask" />
+    <view class="zan_dialog__container">
+      <view class="d_popup">
+        <view class="gong">{{listError}}</view>
+        <view class="sure" bindtap="goswitchTab">确认</view>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog2 ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog2}}">
+    <view class="zan_dialog__mask" />
+    <view class="zan_dialog__container">
+      <view class="d_popup">
+        <view class="box_name">提示</view>
+        <view class="gong_box">
+          <view class="box_inp">当前公里数</view>
+          <view class="inp_input">
+            <input bindinput="getCount" type="number" placeholder-style="color:#7D7E80 ; font-size : 24rpx" class="input_calss" placeholder="请输入当前公里数" />
+          </view>
+        </view>
+        <view class="sure" bindtap="goswitchTab2">确认</view>
+      </view>
+    </view>
+  </view>
+</view>

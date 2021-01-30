@@ -1,0 +1,107 @@
+page {
+  background-color: #fff;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #2574fb, #3138e0);
+  padding-bottom: 90rpx;
+  box-sizing: border-box;
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx 0;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .header .store_ct {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 36rpx 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .header .store_ct image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .store_ct .store_name {
+  flex: 1;
+  font-size: 32rpx;
+  color: #fff;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.container .store_list {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+  margin-top: -120rpx;
+}
+.container .store_list .lost_item {
+  width: 100%;
+}
+.container .store_list .lost_item .lt_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 26rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 0rpx 24rpx 6rpx rgba(17, 41, 180, 0.07);
+  margin-bottom: 26rpx;
+}
+.container .store_list .lost_item .lt_list .lt_img {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 8rpx;
+}
+.container .store_list .lost_item .lt_list .rt_box {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-left: 26rpx;
+  box-sizing: border-box;
+  height: 128rpx;
+}
+.container .store_list .lost_item .lt_list .rt_box .top_title {
+  width: 100%;
+  font-size: 32rpx;
+  color: #323233;
+  font-weight: 600;
+}
+.container .store_list .lost_item .lt_list .rt_box .center_a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .store_list .lost_item .lt_list .rt_box .center_a image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .store_list .lost_item .lt_list .rt_box .center_a .phone {
+  flex: 1;
+  padding-left: 5rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #323233;
+}
+.container .store_list .lost_item .lt_list:last-child {
+  margin: 0;
+}

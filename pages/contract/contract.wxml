@@ -1,0 +1,97 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">合同页</view>
+    </view>
+  </view>
+  <view class="health">
+    <!-- <view class="contract">
+      <view class="cenbox">
+        <view class="cen_word">
+          <image src="{{imagesUrl}}/img_u.png" />
+          <view class="word_text">合同内容见word文档</view>
+        
+        </view>
+      </view>
+    </view> -->
+    <view class="hetong_img" style="height:{{heheight}}px">
+      <image src="{{imgurls}}" mode="scaleToFill" bindtap="previewImage" data-list='{{imgurls}}' data-src="{{imgurls}}" />
+    </view>
+    <view class="btns">
+      <view class="true_hetong">
+        <view class="box" bindtap="changeTrue">
+          <view class="click_icon">
+            <image src="{{imagesUrl}}/img_x.png" wx:if="{{is_cloose}}" />
+            <image src="{{imagesUrl}}/img_s.png" wx:else />
+          </view>
+          <view class="clickk">我已阅读并理解电子合同内容</view>
+        </view>
+        <view class="dianzis">
+          <button class="button_bm" bindtap="getWord">查看电子合同</button>
+        </view>
+      </view>
+      <view class="buy_btn">
+        <button class="button_buy button_bt {{lookPath == true ?'activehui' : ''}}" bindtap="electronicSignature">
+          {{signature}}
+        </button>
+        <button class="button_buy   {{lookPath == true ?'activePath' : ''}}" disabled="{{buttonClicked}}" wx:if="{{identity == 1}}" bindtap="promptlyPay">
+          立即支付 ¥{{price}}
+        </button>
+        <button class="button_buy {{lookPath == true ?'activePath' : ''}}" wx:if="{{identity == 2}}" bindtap="promptlyPay">
+          确认合同
+        </button>
+      </view>
+    </view>
+  </view>
+  <!-- 签名弹窗 -->
+  <view class='sign_name_wrap' wx:if="{{signStatus}}">
+    <cover-view class="sign_top_box">
+      <cover-view class="s" style='height:{{statusTop}}px;'></cover-view>
+      <cover-view class="view_top">
+        <cover-view>
+          <cover-image style="width: 32rpx;height: 32rpx;" src="{{imagesUrl}}/img_z.png" bindtap="closeCanvasFun"></cover-image>
+        </cover-view>
+        <cover-view>电子签名</cover-view>
+        <cover-view></cover-view>
+      </cover-view>
+    </cover-view>
+    <view class="canvals" style="width: {{canvasw}}px; height: {{canvash}}px">
+      <canvas class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback"></canvas>
+      <view class="te_coloe" wx:if="{{coloe==true}}">请在此处签名</view>
+    </view>
+    <cover-view class="sign_btns">
+      <!-- <cover-view class='sign_clear' bindtap="closeCanvasFun">关闭画布</cover-view> -->
+      <cover-view class='sign_btn_right'>
+        <cover-view class='sign_btn' bindtap='cleardraw'>清空</cover-view>
+        <cover-view class='sign_btn2' style="background:#3138e0 !important" bindtap="setSign">
+          完成
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </view>
+  <!-- 支付方式 -->
+  <view class="background_img" wx:if="{{cartLength}}" bindtap="clickCartLength"></view>
+  <view class="downbox" wx:if="{{cartLength}}">
+    <view class="imgupdown" bindtap="clickCartLength">
+      <image src="{{imagesUrl}}/icon_a.png" />
+    </view>
+    <!-- <scroll-view class="right_menu" scroll-y="true" scroll-top="{{scroll_top}}"> -->
+    <view class="list_down">
+      <view class="pt">
+        <view class="pt_icon">¥</view>
+        <view class="pt_price">{{price}}</view>
+      </view>
+      <view class="change_stay">选择支付方式</view>
+    </view>
+    <!-- </scroll-view> -->
+    <view class="btn_bue">
+      <view class="  other_color" bindtap="wechatPayt" disabled="{{buttonClickeda}}">
+        <view class="bu_name">微信支付</view>
+        <view class="bu_small_name" wx:if="{{identity == 2}}">需上传营业执照，经办人身份证正反面和垫付证明</view>
+      </view>
+      <view class="btn_icon " bindtap="Payment" disabled="{{buttonClickedb}}">线下转账</view>
+    </view>
+  </view>
+</view>
